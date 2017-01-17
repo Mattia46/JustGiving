@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from './../../Service/api';
+import Donors from './../Donators/Donators';
 
 class Main extends Component {
   constructor(){
@@ -19,11 +20,16 @@ class Main extends Component {
   render(){
     return(
       <div>
-        <h1>{ this.state.obj.name }</h1>
-        <img>{ this.state.obj.logo }</img>
-        <h3>{ this.state.obj.description }</h3>
-        <h3>{ this.state.obj.impactStatementWhy }</h3>
+        <div>
+          <h1>{ this.state.obj.name }</h1>
+          <img src={ this.state.obj.logoAbsoluteUrl } />
+          <h3>{ this.state.obj.description }</h3>
+          <h3>{ this.state.obj.impactStatementWhy }</h3>
         </div>
+        <div>
+          <Donors props={this.state.obj.donationDisplayAmounts} />
+        </div>
+      </div>
     )
   }
 }
