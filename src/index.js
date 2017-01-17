@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Main from './components/Main/Main';
 
 
 class App extends Component {
@@ -11,6 +12,6 @@ class App extends Component {
 }
 
 ReactDOM.render (
-  <App />,
+  <Main />,
   document.getElementById('app')
 )
